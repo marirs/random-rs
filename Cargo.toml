@@ -8,13 +8,15 @@ include = [
     "assets",
     "src"
 ]
+readme = "README.md"
+license-file = "LICENSE"
 edition = "2018"
 
 [dependencies]
 chrono = { version = "0.4.19", optional = true }
 csv = { version = "1", optional = true }
 mac_oui = "0.2.0"
-rand = "0.8.3"
+rand = { version = "0.8.3", optional = true }
 serde = { version = "1", features = ["derive"] }
 serde_derive = "1"
 
@@ -26,9 +28,19 @@ path = "src/lib.rs"
 all-features = true
 
 [features]
-timegenerate = ["chrono"]
-tz = ["csv"]
+timegenerate = ["chrono", "rand"]
+tz = ["csv", "rand"]
 random-all = ["timegenerate", "tz"]
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+debug-assertions = false
+debug = false
+opt-level = 3
+lto = true
 
 [[example]]
 name = "tz"

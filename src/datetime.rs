@@ -3,7 +3,9 @@ use chrono::{DateTime, Utc, Duration};
 #[cfg(feature = "tz")]
 use csv;
 #[cfg(feature = "tz")]
-use rand::{Rng, seq::SliceRandom, thread_rng};
+use rand::{seq::SliceRandom, thread_rng};
+#[cfg(feature = "timegenerate")]
+use rand::Rng;
 #[cfg(feature = "tz")]
 use serde::{Serialize, Deserialize, Deserializer};
 
