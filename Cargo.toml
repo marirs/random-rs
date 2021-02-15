@@ -1,0 +1,41 @@
+[package]
+name = "random"
+version = "0.1.0"
+authors = ["Marirs <marirs@gmail.com>"]
+description = "Random generator of timezones, dates, IP address, Mac Address, Users, User Agents, etc..."
+keywords = ["random", "generator", "date", "ip", "users"]
+include = [
+    "assets",
+    "src"
+]
+edition = "2018"
+
+[dependencies]
+chrono = { version = "0.4.19", optional = true }
+csv = { version = "1", optional = true }
+mac_oui = "0.2.0"
+rand = "0.8.3"
+serde = { version = "1", features = ["derive"] }
+serde_derive = "1"
+
+[lib]
+name = "random"
+path = "src/lib.rs"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+timegenerate = ["chrono"]
+tz = ["csv"]
+random-all = ["timegenerate", "tz"]
+
+[[example]]
+name = "tz"
+path = "examples/tz.rs"
+required-features = ["tz"]
+
+[[example]]
+name = "dt"
+path = "examples/dt.rs"
+required-features = ["timegenerate"]
