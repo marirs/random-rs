@@ -15,16 +15,12 @@ A Random generator for specific use-cases.
 - with `all features`
 ```toml
 [dependencies]
-random = { git = "https://github.com/marirs/random-rs", branch = "main" }
-
-[dependencies.random]
-features = ["random-all"]
+random = { git = "https://github.com/marirs/random-rs", branch = "main", features = ["random-all"] }
 ```
 
 - with `specific feature` datetime generator
 ```toml
-[dependencies.random]
-features = ["timegenerator"]
+random = { git = "https://github.com/marirs/random-rs", branch = "main", features = ["timegenerate"] }
 ```
 
 ## Compile
