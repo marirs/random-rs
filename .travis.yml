@@ -9,5 +9,5 @@ matrix:
   allow_failures:
     - rust: nightly
 script:
-  - cargo build --verbose --features "random-all"
-  - cargo test --verbose --features "random-all"
+  - cargo build --verbose
+  - cargo test --verbose
