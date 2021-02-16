@@ -26,7 +26,7 @@ random = { git = "https://github.com/marirs/random-rs", branch = "main", default
 ## Compile
 - compile with `all features`
 ```bash
-cargo b --features "random-all"
+cargo b
 ```
 - compile with `specific feature`: `cargo b --features "<feature_name>"`; eg:
 ```bash
