@@ -15,12 +15,12 @@ A Random generator for specific use-cases.
 - with `all features`
 ```toml
 [dependencies]
-random = { git = "https://github.com/marirs/random-rs", branch = "main", features = ["random-all"] }
+random = { git = "https://github.com/marirs/random-rs", branch = "main" }
 ```
 
 - with `specific feature` datetime generator
 ```toml
-random = { git = "https://github.com/marirs/random-rs", branch = "main", features = ["timegenerate"] }
+random = { git = "https://github.com/marirs/random-rs", branch = "main", default-features = false, features = ["timegenerate"] }
 ```
 
 ## Compile
@@ -37,7 +37,7 @@ compiles with both timegenerate and tz features
 ## Running examples from the example folder
 - Example of the Timezone generator
 ```bash
-cargo run --example tz --features "tz"
+cargo run --example tz
    Compiling random v0.1.0 (/Users/sgp/Documents/DEV/Repos/random-rs)
     Finished dev [unoptimized + debuginfo] target(s) in 1.40s
      Running `target/debug/examples/tz`

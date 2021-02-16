@@ -28,9 +28,9 @@ path = "src/lib.rs"
 all-features = true
 
 [features]
+default = ["timegenerate", "tz"]
 timegenerate = ["chrono", "rand"]
 tz = ["csv", "rand"]
-random-all = ["timegenerate", "tz"]
 
 [profile.dev]
 opt-level = 3
