@@ -14,11 +14,14 @@ edition = "2018"
 
 [dependencies]
 chrono = { version = "0.4.19", optional = true }
-csv = { version = "1", optional = true }
-mac_oui = "0.2.0"
+csv = { version = "1.1.5", optional = true }
+ipnetwork = "0.17.0"
+mac_oui = "0.3.1"
 rand = { version = "0.8.3", optional = true }
-serde = { version = "1", features = ["derive"] }
-serde_derive = "1"
+regex = "1.4.3"
+serde = { version = "1.0.123", features = ["derive"] }
+serde_derive = "1.0.123"
+uuid = { version = "0.8.2", features = ["v4"] }
 
 [lib]
 name = "random"

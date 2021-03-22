@@ -1,4 +1,4 @@
-use chrono::{Utc, TimeZone};
+use chrono::{TimeZone, Utc};
 
 use random::datetime::GenerateTime;
 

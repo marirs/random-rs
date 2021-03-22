@@ -1,4 +1,4 @@
-use random::datetime::Tz;
+use random::tz::Tz;
 
 fn main() {
     let tz = Tz::tz_by_iso_code("IN");
